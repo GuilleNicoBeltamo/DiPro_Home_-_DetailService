@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="styleCart.css" />
+    <script src="./assets/contador.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <img src="./assets/DiProRex-Logo.png" /> 
+            <a href="./index.html">DiPro Rex</a>
+          </li>
+          <li>
+            <a href="#servicios">Portfolio</a>
+          </li>
+          <li>
+            <a href="#about">Acerca de</a>
+          </li>
+          <li>
+            <a href="#contact">Contacto</a>
+          </li>
+        </ul>
+        <!-- Barra de busqueda -->
+        <div class="search">
+          <form action="#">
+              <input type="text"
+                  placeholder=" Search"
+                  name="search">
+              <button type="submit">Buscar</button>
+          </form>
+        </div>
+
+      </nav>
+    </header>
+  
+    <main>
+      <section class="section">
+        <div class="intro">
+            <p>Servicios elegidos</p>
+        </div>
+        <div class="productoSeleccionado">
+            <img src="https://picsum.photos/400/300" />
+            <div class="nameAndDesc">
+                <h3>Servicio 1</h3>
+                <p>descripcion: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae pariatur repudiandae perspiciatis facilis illo explicabo quo quaerat eos voluptate assumenda?</p>
+            </div>
+            <div class="contador">
+                <button onclick="decrement()" class="buttonCont">-</button>    
+                <h2 id="counting1"> 1 </h2>
+                <button onclick="increment()" class="buttonCont">+</button>  
+            </div>
+            <div class="precio" id="precioFinal">
+                <p>200$</p>
+            </div>
+        </div>
+        <div class="productoSeleccionado">
+            <img src="https://picsum.photos/400/300" />
+            <div class="nameAndDesc">
+                <h3>Servicio 2</h3>
+                <p>descripcion: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae pariatur repudiandae perspiciatis facilis illo explicabo quo quaerat eos voluptate assumenda?</p>
+            </div>
+            <div class="contador">
+                <button onclick="decrement()" class="buttonCont">-</button>    
+                <h2 id="counting2"> 1 </h2>
+                <button onclick="increment()" class="buttonCont">+</button>  
+            </div>
+            <div class="precio">
+                <p>200$</p>
+            </div>
+        </div>
+        <div class="productoSeleccionado">
+            <img src="https://picsum.photos/400/300" />
+            <div class="nameAndDesc">
+                <h3>Servicio 3</h3>
+                <p>descripcion: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae pariatur repudiandae perspiciatis facilis illo explicabo quo quaerat eos voluptate assumenda?</p>
+            </div>
+            <div class="contador">
+                <button onclick="decrement()" class="buttonCont">-</button>    
+                <h2 id="counting3"> 1 </h2>
+                <button onclick="increment()" class="buttonCont">+</button>  
+            </div>
+            <div class="precio">
+                <p>200$</p>
+            </div>
+        </div>
+        <div class="subtotal">
+          <button type="submit">Ir a pagar</button>
+          <p>Total a pagar: $ 600</p>
+        </div>  
+      </section>
+    </main>
+  
+    <footer>
+        <nav>
+          <ul>
+            <li>
+              <a href="#servicios">Portfolio</a>
+            </li>
+            <li>
+              <a href="#about">Acerca de</a>
+            </li>
+            <li>
+              <a href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <img src="./assets/./DiProRex-Logo.png" />
+          <p>Copyrigth 2022</p> 
+        </div>
+        <div class="redes">
+          <img src="./assets/./Twiter.png" />
+          <img src="./assets/./Instagram.png" />
+          <img src="./assets/./Fb.png" />
+
+        </div>
+    </footer>
+  
+  </body>
+</html>

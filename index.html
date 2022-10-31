@@ -3,6 +3,7 @@
   <head>
     <title>DiPro Rex</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="carrusel.css" />
   </head>
 
   <body>
@@ -11,7 +12,7 @@
       <nav>
         <ul>
           <li>
-            <img src="./DiProRex-Logo.png" /> 
+            <img src="./assets/DiProRex-Logo.png" /> 
             <a href="#inicio">DiPro Rex</a>
           </li>
           <li>
@@ -26,6 +27,9 @@
         </ul>
         <!-- Barra de busqueda -->
         <div class="search">
+          <a href="./cart.html">
+            <img src="./assets/Compra-Logo.png" />
+          </a>
           <form action="#">
               <input type="text"
                   placeholder=" Search"
@@ -33,14 +37,13 @@
               <button type="submit">Buscar</button>
           </form>
         </div>
-
       </nav>
     </header>
   
     <main>
 
       <section class="section" id="inicio">
-        <h1>Banner</h1>
+        <h1>DiPro Rex: Soluciones de diseño</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
           at, nisi dolore praesentium beatae, nam perferendis et ea quidem aut
@@ -62,7 +65,7 @@
                   </div>  
                   <div>
                     <a href="">
-                      <img src="Compra-Logo.png" />
+                      <img src="./assets/Compra-Logo.png" />
                     </a>
                   </div>
                 </div>
@@ -76,7 +79,7 @@
                   </div>  
                   <div>
                     <a href="">
-                      <img src="Compra-Logo.png" />
+                      <img src="./assets/Compra-Logo.png" />
                     </a>
                   </div>
                 </div>
@@ -90,7 +93,7 @@
                   </div>  
                   <div>
                     <a href="">
-                      <img src="Compra-Logo.png" />
+                      <img src="./assets/Compra-Logo.png" />
                     </a>
                   </div>
                 </div>
@@ -104,7 +107,35 @@
                   </div>  
                   <div>
                     <a href="">
-                      <img src="Compra-Logo.png" />
+                      <img src="./assets/Compra-Logo.png" />
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>Servicio 5</h3>
+                <img src="https://picsum.photos/400/300" />
+                <div>
+                  <div>
+                    <a href="">Saber mas</a>
+                  </div>  
+                  <div>
+                    <a href="">
+                      <img src="./assets/Compra-Logo.png" />
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h3>Servicio 6</h3>
+                <img src="https://picsum.photos/400/300" />
+                <div>
+                  <div>
+                    <a href="">Saber mas</a>
+                  </div>  
+                  <div>
+                    <a href="">
+                      <img src="./assets/Compra-Logo.png" />
                     </a>
                   </div>
                 </div>
@@ -141,6 +172,46 @@
       </section>    
 
       <section class="section" id="contact">
+        <h2>Nuestros clientes</h2>
+        <div class="slide">
+          <div class="slide-inner">
+              <input class="slide-open" type="radio" id="slide-1" 
+                    name="slide" aria-hidden="true" hidden="" checked="checked">
+              <div class="slide-item">
+                  <img src="./assets/Cli1.png">
+              </div>
+              <input class="slide-open" type="radio" id="slide-2" 
+                    name="slide" aria-hidden="true" hidden="">
+              <div class="slide-item">
+                <img src="./assets/Cli2.png">
+              </div>
+              <input class="slide-open" type="radio" id="slide-3" 
+                    name="slide" aria-hidden="true" hidden="">
+              <div class="slide-item">
+                <img src="./assets/Cli3.png">
+              </div>
+              <label for="slide-3" class="slide-control prev control-1">‹</label>
+              <label for="slide-2" class="slide-control next control-1">›</label>
+              <label for="slide-1" class="slide-control prev control-2">‹</label>
+              <label for="slide-3" class="slide-control next control-2">›</label>
+              <label for="slide-2" class="slide-control prev control-3">‹</label>
+              <label for="slide-1" class="slide-control next control-3">›</label>
+              <ol class="slide-indicador">
+                  <li>
+                      <label for="slide-1" class="slide-circulo">•</label>
+                  </li>
+                  <li>
+                      <label for="slide-2" class="slide-circulo">•</label>
+                  </li>
+                  <li>
+                      <label for="slide-3" class="slide-circulo">•</label>
+                  </li>
+              </ol>
+          </div>
+      </div>
+      </section>
+
+      <section class="section" id="contact">
         <h2>Contactate con nosotros</h2>
         <form action="" method="post">                        <!-- Envia los datos de formulario a una dirección en particular y con un metodo en especifico -->
           <input type="text" placeholder="Nombre" />
@@ -171,14 +242,13 @@
           </ul>
         </nav>
         <div>
-          <img src="./DiProRex-Logo.png" />
+          <img src="./assets/./DiProRex-Logo.png" />
           <p>Copyrigth 2022</p> 
         </div>
         <div class="redes">
-          <img src="./Twiter.png" />
-          <img src="./Instagram.png" />
-          <img src="./Fb.png" />
-
+          <img src="./assets/./Twiter.png" />
+          <img src="./assets/./Instagram.png" />
+          <img src="./assets/./Fb.png" />
         </div>
     </footer>
   

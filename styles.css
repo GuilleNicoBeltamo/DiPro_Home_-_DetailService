@@ -17,274 +17,291 @@ body {
     width: calc(100vw - (100vw - 100%));
     background-color: var(--Color3-Fondo);
 }
+    /*--- Header ---*/
+    header {
+        background-color: var(--Color2-HyF);      /* Color de fondo */
+        padding: 16px 32px;               /* 16px en sentido vertical, 32px en sentido horizontal */  
+        position: sticky;                 /* Dejar el Header fijo conforme scrolea */  
+        top: 0;
+        z-index: 100;
+    }
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;                /* Elimina puntitos de la lista */   
+    }
+    header nav ul li {                  /*  LISTA */
+        padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
+        transition: all .5s;            /* Delay de 0.5s para los efectos */
+        cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        text-align: center;
+    }
+    header nav ul li a {                 
+        flex-direction: row;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    header nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
+        text-decoration: none;          /* Elimina el subrayado del texto */
+        color: white;
+        font-weight: bold;
+    }
+    header nav ul li:hover {            /* Efectos cuando posiciono el puntero encima del texto */
+        background-color: #0c3131;    /* Cambia el color de fondo */  
+    }
+    /* Barra de busqueda */
+    .search input[type=text]{
+        width:300px;
+        height:25px;
+        border-radius:4px;
+        border: none;
+    }
+    header nav div {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+    }
+    .search button{
+        background-color: var(--Color1-Det);
+        color: #f2f2f2;
+        padding: 5px 10px;
+        margin-right: 16px;
+        font-size: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    } 
 
-/*--- Header ---*/
-header {
-    background-color: var(--Color2-HyF);      /* Color de fondo */
-    padding: 16px 32px;               /* 16px en sentido vertical, 32px en sentido horizontal */  
-    position: sticky;                 /* Dejar el Header fijo conforme scrolea */  
-    top: 0;
-    z-index: 100;
-}
-header nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;                /* Elimina puntitos de la lista */   
-}
-header nav ul li {                  /*  LISTA */
-    padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
-    transition: all .5s;            /* Delay de 0.5s para los efectos */
-    cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    text-align: center;
-}
-header nav ul li a {                 
-    flex-direction: row;
-    padding: 4px 8px;
-    justify-content: center;
-    align-items: center;
-}
-header nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
-    text-decoration: none;          /* Elimina el subrayado del texto */
-    color: white;
-    font-weight: bold;
-}
-header nav ul li:hover {            /* Efectos cuando posiciono el puntero encima del texto */
-    background-color: #0c3131;    /* Cambia el color de fondo */  
-}
-/* Barra de busqueda */
-.search input[type=text]{
-    width:300px;
-    height:25px;
-    border-radius:4px;
-    border: none;
-}
-header nav div {
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-}
-.search button{
-    background-color: var(--Color1-Det);
-    color: #f2f2f2;
-    padding: 5px 10px;
-    margin-right: 16px;
-    font-size: 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-} 
+    /*--- Main ---*/
+    .section {
+        padding: 16px 32px;
+    }
+    .section h1, .section h2 {
+        color: var(--Color2-HyF);
+        font-size: 32px;
+        text-align: center;
+    }
+    .section h1 {
+        background-color: aliceblue;
+        padding: 4px 24px;
+        border-radius: 12px;
+        font-size: 30px;
 
-/*--- Main ---*/
-.section {
-    padding: 16px 32px;
-}
-.section h1, .section h2 {
-    color: var(--Color2-HyF);
-    font-size: 32px;
-    text-align: center;
-}
-#inicio {
-    background-color: var(--Color1-Det);
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    align-items:center;
-    text-align: center;
-    height: 15vh;
-    position: relative;
-}
-#inicio p {
-    background-color: rgba(0,0,0,.2);
-    border-radius: 8px;
-    padding: 16px 32px;
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    height: 64px;
-}
-#inicio img {
-    position: absolute;
-    bottom: 16px;
-    left: 12px;
-    right: 55%;
-    height: 64px;
-    width: 40vw;
-    border-radius: 8px;
-}
+    }
+    #inicio {
+        background-color: var(--Color1-Det);
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+        text-align: center;
+        height: 16vh;
+        background-image: url("./assets/3.jpeg");
+        background-attachment: fixed, scroll;
+        background-repeat: repeat, repeat-y;
+        gap: 20px;
+    }
+    #inicio p {
+        background-color: rgba(0,0,0,.5);
+        color: aliceblue;
+        border-radius: 8px;
+        padding: 16px 32px;
 
-/*--- Servicios ---*/
-#servicios div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#servicios div ul {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    padding: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
-}
-#servicios div ul li {
-    display: flex;
-    flex-direction: column;
-    list-style: none; 
-    margin: 16px 16px;
-    background-color: var(--Color5);
-    border-radius: 16px;
-    padding: 32px 16px;
-}
-#servicios div ul li div div a{
-    text-decoration: none;          /* Elimina el subrayado del texto */
-}
+    }
 
-#servicios div ul li img {
-    margin: 16px 16px;
-    border-radius: 8px;    
-}
-#servicios div ul li h3 {
-    color: var(--Color2-HyF);
-}
-#servicios div ul li div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-#servicios div ul li div div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 45%;
-    margin: 4px 12px;
-    background-color: var(--Color2-HyF);
-    border-radius: 16px;
-    padding: 12px 12px;
-    height: 16px;
-}
-#servicios div ul li div div img, #servicios div ul li div div a {
-    color: white;
-}
 
-/*--- About ---*/
-#about div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-}
-#about div article {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: stretch;
-    border-radius: 8px;
-    padding: 8px 12px;
-    width: 30%;
-    max-width: 480px;
-}
-#about div article img {
-    margin-bottom: 12px;
-    text-align: center;
-    border-radius: 16px;
-}
-#about div article p {
-    text-align: center;
-}
+    /*--- Servicios ---*/
+    #servicios div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #servicios div ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+    }
+    #servicios div ul li {
+        display: flex;
+        flex-direction: column;
+        list-style: none; 
+        margin: 16px 16px;
+        background-color: var(--Color5);
+        border-radius: 16px;
+        padding: 32px 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 50%;
+        max-width: 400px;
+    }
+    #servicios div ul li div div a{
+        text-decoration: none;          /* Elimina el subrayado del texto */
+    }
 
-/*--- contact ---*/
-#contact form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#contact form input { 
-    margin: 8px;
-}
+    #servicios div ul li img {
+        margin: 16px 16px;
+        border-radius: 8px;    
+    }
+    #servicios div ul li h3 {
+        color: var(--Color2-HyF);
+    }
+    #servicios div ul li div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #servicios div ul li div div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        margin: 4px 12px;
+        background-color: var(--Color2-HyF);
+        border-radius: 16px;
+        padding: 12px 12px;
+        height: 16px;
+    }
+    #servicios div ul li div div img, #servicios div ul li div div a {
+        color: white;
+    }
 
-/*--- footer ---*/
-footer {
-    background-color: var(--Color2-HyF);      /* Color de fondo */
-    padding: 16px 32px;               /* 16px en sentido vertical, 32px en sentido horizontal */  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-footer nav ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;                /* Elimina puntitos de la lista */   
-}
-footer nav ul li {                  /*  LISTA */
-    padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
-    transition: all .5s;            /* Delay de 0.5s para los efectos */
-    cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    text-align: center;
-}
-footer nav ul li a {                 
-    flex-direction: row;
-    padding: 4px 8px;
-    justify-content: center;
-    align-items: center;
-}
-footer nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
-    text-decoration: none;          /* Elimina el subrayado del texto */
-    color: white;
-}
-footer nav ul li:hover {            /* Efectos cuando posiciono el puntero encima del texto */
-    background-color: #0c3131;    /* Cambia el color de fondo */  
-}
-footer div {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    color: var(--Color3-Fondo);
-}
-footer div img {
-    height: 32x;
-    width: 32px;
-    margin: 4px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-}
+    /*--- About ---*/
+    #about div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+    #about div article {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: stretch;
+        border-radius: 8px;
+        padding: 8px 12px;
+        width: 30%;
+        max-width: 480px;
+    }
+    #about div article img {
+        margin-bottom: 12px;
+        text-align: center;
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #about div article p {
+        text-align: center;
+    }
 
-footer div p {
-    color: var(--Color3-Fondo);
+    /*--- contact ---*/
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    #contact form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 20px;
+        background-color: #eccfbc;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #contact form input { 
+        margin: 8px;
+    }
 
-}
-.redes {
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-}
-.redes img {
-    height: 20px;
-    width: 20px;
-    margin: 4px;
-}
+    /*--- footer ---*/
+    footer {
+        background-color: var(--Color2-HyF);      /* Color de fondo */
+        padding: 16px 32px;               /* 16px en sentido vertical, 32px en sentido horizontal */  
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer nav {
+        width: 33%;
+    }
+    footer nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;                /* Elimina puntitos de la lista */   
+    }
+    footer nav ul li {                  /*  LISTA */
+        padding: 4px 8px;               /* Padding que agrega gaps enrte los elementos del Nav */
+        transition: all .5s;            /* Delay de 0.5s para los efectos */
+        cursor: pointer;                /* Para que el boton aplique a la lista y no solo al texto...  */
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        text-align: center;
+    }
+    footer nav ul li a {                 
+        flex-direction: row;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    footer nav ul li a {                /* TEXTO DENTRO DE LA LISTA */
+        text-decoration: none;          /* Elimina el subrayado del texto */
+        color: white;
+    }
+    footer nav ul li:hover {            /* Efectos cuando posiciono el puntero encima del texto */
+        background-color: #0c3131;    /* Cambia el color de fondo */  
+    }
+    footer div {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        color: var(--Color3-Fondo);
+        width: 33%;
+    }
+    footer div img {
+        height: 32x;
+        width: 32px;
+        margin: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+
+    footer div p {
+        color: var(--Color3-Fondo);
+
+    }
+    .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+    }
+    .redes img {
+        height: 20px;
+        width: 20px;
+        margin: 4px;
+    }
